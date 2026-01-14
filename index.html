@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joayo Korean</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1 onclick="navigateTo('home')">Joayyo Korean</h1>
+            <nav class="nav-links">
+                <span class="nav-item active" onclick="navigateTo('home')" data-i18n="navHome">Home</span>
+                <span class="nav-item" onclick="navigateTo('vocab')" data-i18n="navVocab">Vocab</span>
+                <span class="nav-item" onclick="navigateTo('flashcards')" data-i18n="navCards">Cards</span>
+                <span class="nav-item" onclick="navigateTo('quiz')" data-i18n="navQuiz">Quiz</span>
+                <span class="nav-item" onclick="navigateTo('progress')" data-i18n="navProgress">Progress</span>
+            </nav>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <select id="lang-select" onchange="changeLanguage(this.value)"
+                    style="padding: 0.25rem; border-radius: 0.25rem; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color);">
+                    <option value="en">English</option>
+                    <option value="id">Indonesia</option>
+                </select>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Dark Mode">🌙</button>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <!-- Dynamic Content Injected Here -->
+        </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
